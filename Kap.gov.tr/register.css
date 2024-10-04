@@ -1,0 +1,36 @@
+.kayıt {
+  width: 750px !important;
+  justify-content: center;
+  align-items: center;
+}
+.color {
+  background-color: #99989d;
+  padding: 40px;
+  margin: 40px;
+  border: 2px solid gray;
+  border-radius: 30px;
+}
+.header {
+  text-align: center;
+  font-size: xx-large;
+}
+.txt {
+  text-align: center;
+}
+.txt-link {
+  text-decoration: none;
+  color: #8a1315;
+  font-weight: bold;
+}
+.txt-link:hover {
+  text-decoration: none;
+  color: yellowgreen;
+  font-weight: bold;
+}
+.parola {
+  text-align: right;
+}
+.parola a {
+  text-align: right;
+  color: black;
+}

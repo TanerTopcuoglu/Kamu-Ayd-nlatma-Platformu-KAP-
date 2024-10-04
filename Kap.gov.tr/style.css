@@ -1,0 +1,197 @@
+/* navbarr kısmı */
+.harita {
+  background: linear-gradient(
+    to bottom,
+    rgba(117, 117, 122, 255),
+    rgba(202, 202, 204, 255)
+  );
+}
+.line {
+  width: 100%;
+  height: 5px;
+  background-color: #a43424;
+}
+
+.navbar-color {
+  background-color: #d9d9dd !important;
+}
+.container {
+  width: 1050px;
+}
+.text {
+  font-size: 18px;
+  color: white;
+}
+.cerceve {
+  border-right: 2px solid rgb(234, 226, 226);
+  padding: 0px 5px 0px 5px;
+}
+.search {
+  width: 900px;
+  border-radius: 20px;
+}
+
+/* navbar sorgu dropdownları */
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  border-radius: 0;
+}
+.navbar-link:hover {
+  color: white;
+  background-color: #65646a;
+  border-radius: 0;
+  text-decoration: none;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.dropdown-size {
+  border-radius: 0;
+  width: 350px;
+  height: 60px;
+}
+.dropdown-link:hover {
+  background-color: #a43424;
+  text-decoration: underline;
+  color: white;
+}
+/* Sirketler kısmı */
+.s-yazı-fontu {
+  font-size: 15px;
+}
+
+/* bildirimler kısmı */
+.golge:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  transition: 0.2s;
+}
+.red-border {
+  border: 1px solid gray;
+}
+
+.red-border:hover {
+  border: 2px solid #8a1315;
+}
+
+/* modall kısmı */
+
+.linka:hover {
+  text-decoration: underline !important;
+}
+.link:hover {
+  color: #0082f3;
+  text-decoration: underline !important;
+}
+
+.linka {
+  text-decoration: none;
+}
+
+.ccerve {
+  border: 1px solid gray;
+}
+.yazı {
+  color: #333;
+}
+
+.modal-color {
+  background-color: #f7f7f8;
+}
+.kontenır {
+  width: 750px;
+}
+/* modalın tıklanabilir olması */
+.modalAc {
+  bottom: 0px;
+  left: 100px;
+  width: 800px;
+  height: 115px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* footerr kısmı */
+.bulten-renk {
+  background-color: #717077 !important;
+}
+.bulten-link-renk {
+  background-color: #65646a !important;
+}
+.bulet-yazı {
+  color: #99989d;
+}
+.type-medium {
+  font-size: 16px;
+  line-height: 20px;
+}
+.beyaz:hover {
+  color: rgb(210, 235, 52);
+}
+.beyaz {
+  color: white;
+}
+
+.footer-link {
+  color: white;
+}
+.footer-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.bulten-renk-degis {
+  background-color: #b0b0b0;
+}
+.bulten-renk-degis:hover {
+  background-color: white;
+  transition: 0.6s;
+}
+.bulten-yazı-b {
+  font-size: 14px;
+}
+.red {
+  color: #8a1315 !important;
+}
+
+.kapak {
+  background-image: url("Footer_bg.gif");
+  background-position: top right;
+  object-fit: cover;
+  height: 72vh;
+
+  position: relative;
+  background-repeat: no-repeat;
+}
+.small,
+small {
+  font-size: 60%;
+}
+
+/* en alttaki yukarı butonu */
+
+#backtotop {
+  position: fixed;
+  bottom: 350px;
+  right: 30px;
+}
+#backtotop i {
+  font-size: 20px;
+  transition: color 0.6s;
+}
+.html {
+  scroll-behavior: smooth;
+}
+
+#canvas {
+  position: fixed;
+  bottom: 280px;
+  right: 5px;
+}
+
+/* Sirket ekleme kodu */
+
+.dropdown-toggle::after {
+  display: none;
+}

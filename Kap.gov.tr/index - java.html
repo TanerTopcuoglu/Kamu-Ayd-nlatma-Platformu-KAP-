@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KAP</title>
+    <link rel="shortcut icon" type="image/x-icon" href='kap-favico.png'>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <div class="line"></div>
+    <div class="row ">
+      <nav class="navbar navbar-expand-sm navbar-dark navbar-color harita">
+        <div class="container my-4 justify-content-evenly ">
+          <a href="index.html" class="navbar-brand"
+            ><img src="kap-logo.png" width="100px" height="80px" alt=""
+          /></a>
+          <ul class="navbar-nav text g-2  space-between">
+            <div class="dropdown cerceve ">
+              <button class="btn btn-link dropdown-toggle navbar-link " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Bildirim Sorguları
+              </button>
+              <ul class="dropdown-menu g-0 m-0 p-0 border-0">
+                <li ><a class="dropdown-item dropdown-size dropdown-link  ps-4 align-items-center d-flex border-bottom" href="#">Bugun Gelen Bildirimler</a></li>
+                <li><a class="dropdown-item dropdown-size dropdown-link ps-4 align-items-center d-flex border-bottom" href="#">Beklenen Bildirimler</a></li>
+                <li><a class="dropdown-item  dropdown-size dropdown-link
+                  ps-4 align-items-center d-flex border-bottom" href="#">Detaylı Sorgulama</a></li>
+                <li><a class="dropdown-item  dropdown-size dropdown-link
+                  ps-4 align-items-center d-flex border-bottom" href="#">Finansal Tablo Kalem Sorgulama</a></li>
+              </ul>
+            </div>
+            <div class="dropdown cerceve ">
+              <button class="btn btn-link dropdown-toggle navbar-link " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Şirketler
+              </button>
+              <ul class="dropdown-menu g-0 m-0 p-0 border-0">
+                <li ><a class="dropdown-item dropdown-size dropdown-link  ps-4 align-items-center d-flex border-bottom" href="#">Bist Şirketleri</a></li>
+                <li><a class="dropdown-item dropdown-size dropdown-link ps-4 align-items-center d-flex border-bottom" href="#">Yatırım Kuruluşları</a></li>
+                <li><a class="dropdown-item  dropdown-size dropdown-link
+                  ps-4 align-items-center d-flex border-bottom" href="#">Portföy Yönetim Şirketleri</a></li>
+                <li><a class="dropdown-item  dropdown-size dropdown-link
+                  ps-4 align-items-center d-flex border-bottom" href="#">Bağımsız Denetim Kuruluşları</a></li>
+                  <li ><a class="dropdown-item dropdown-size dropdown-link  ps-4 align-items-center d-flex border-bottom" href="#">Derecelendirme Şirketleri</a></li>
+                <li><a class="dropdown-item dropdown-size dropdown-link ps-4 align-items-center d-flex border-bottom" href="#">Değerleme Şirketleri</a></li>
+              
+                <li><a class="dropdown-item  dropdown-size dropdown-link
+                  ps-4 align-items-center d-flex border-bottom" href="#">KAP Üyeliği Sona Eren Şirketler</a></li>
+              </ul>
+            </div>
+            <div class="dropdown cerceve ">
+              <button class="btn btn-link dropdown-toggle navbar-link " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Şirketler
+              </button>
+              <ul class="dropdown-menu g-0 m-0 p-0 border-0">
+                <li ><a class="dropdown-item dropdown-size dropdown-link  ps-4 align-items-center d-flex border-bottom" href="#">Borsa Yatırım Fonları</a></li>
+                <li><a class="dropdown-item dropdown-size dropdown-link ps-4 align-items-center d-flex border-bottom" href="#">Yatırım Fonları</a></li>
+                <li><a class="dropdown-item  dropdown-size dropdown-link
+                  ps-4 align-items-center d-flex border-bottom" href="#">Emeklilik Yatırım Fonları</a></li>
+                <li><a class="dropdown-item  dropdown-size dropdown-link
+                  ps-4 align-items-center d-flex border-bottom" href="#">OKS Emeklilik Yatırım Fonları</a></li>
+                  <li ><a class="dropdown-item dropdown-size dropdown-link  ps-4 align-items-center d-flex border-bottom" href="#">Yabancı Yatırım Fonları</a></li>
+                <li><a class="dropdown-item dropdown-size dropdown-link ps-4 align-items-center d-flex border-bottom" href="#">Varlık Finansman Fonları</a></li>
+              
+                <li><a class="dropdown-item  dropdown-size dropdown-link
+                  ps-4 align-items-center d-flex border-bottom" href="#">Konut Finansman Fonları</a></li>
+                  <li ><a class="dropdown-item dropdown-size dropdown-link  ps-4 align-items-center d-flex border-bottom" href="#">Gayrimenkul Yatırım Fonları</a></li>
+                  <li><a class="dropdown-item dropdown-size dropdown-link ps-4 align-items-center d-flex border-bottom" href="#">Girişim Sermayesi Yatırım Fonları</a></li>
+                  <li><a class="dropdown-item  dropdown-size dropdown-link
+                    ps-4 align-items-center d-flex border-bottom" href="#">Proje Finansman Fonları</a></li>
+                  <li><a class="dropdown-item  dropdown-size dropdown-link
+                    ps-4 align-items-center d-flex border-bottom" href="#">Tasfiye Olmuş Fonlar</a></li>
+                  
+              </ul>
+            </div>
+            <div class="dropdown cerceve ">
+              <button class="btn btn-link dropdown-toggle navbar-link " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Kap Hakkında
+              </button>
+              <ul class="dropdown-menu g-0 m-0 p-0 border-0">
+                <li ><a class="dropdown-item dropdown-size dropdown-link  ps-4 align-items-center d-flex border-bottom" href="#">Mevzuat, Duyurular ve Kılavuzlar</a></li>
+                <li><a class="dropdown-item dropdown-size dropdown-link ps-4 align-items-center d-flex border-bottom" href="#">Sertifika İşlemleri</a></li>
+                <li><a class="dropdown-item  dropdown-size dropdown-link
+                  ps-4 align-items-center d-flex border-bottom" href="#">Genel Bilgi</a></li>
+                <li><a class="dropdown-item  dropdown-size dropdown-link
+                  ps-4 align-items-center d-flex border-bottom" href="#">İlgili Linkler</a></li>
+                  <li ><a class="dropdown-item dropdown-size dropdown-link  ps-4 align-items-center d-flex border-bottom" href="#">Sermaye Piyasası Aracı Alım Satım Bildirimi</a></li>
+                <li><a class="dropdown-item dropdown-size dropdown-link ps-4 align-items-center d-flex border-bottom" href="#">KVKK Kapsamında Düzeltilmiş Bildirimler</a></li>
+            
+              </ul>
+            </div>
+          </ul>
+  
+          <a href="index.html" class="navbar-brand "
+            ><img
+              src="merkezi-kayit-istanbul-logo.png"
+              width="150px"
+              height="80px"
+              alt=""
+          /></a>
+          </div>
+          
+      </nav>
+      <nav class="navbar navbar-expand-sm navbar-dark navbar-color ">
+          <div class="container px-5 justify-content-evenly">
+              <div class="row search g-0 mb-3 ">
+                  <div class="col-12 d-flex">
+                  <select class="form-control " style="width: 150px;">
+                      <option value="0">Tüm Katagoriler </option>
+                      <option value="1">Özel Durum Açıklaması</option>
+                      <option value="2">Finansal Rapor</option>
+                      <option value="3">Diğer bildirimler</option>
+                      <input type="text" placeholder="Arama yapınız..." class="form-control" />
+                      <div class="col-1 a-buton"><button class="btn btn-warning">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                        </button></div>
+                  </select>
+                 
+                  </div>
+                 
+              </div>
+              <form d-flex>
+                 
+                  
+              
+              </form>
+          </div>
+      </nav>
+    </div>
+    <header>
+      <!-- fotoğraflar ve linkler var -->
+      <div id="kaydirma">
+        <div class="carousel slide mb-5" data-bs-ride="carousel" id="slider1">
+          <ol class="carousel-indicators " style="list-style-type: none;">
+            <li data-bs-target="#slider1" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#slider1" data-bs-slide-to="1"></li>
+            <li data-bs-target="#slider1" data-bs-slide-to="2"></li>
+            <li data-bs-target="#slider1" data-bs-slide-to="3"></li>
+            <li data-bs-target="#slider1" data-bs-slide-to="4"></li>
+          </ol>
+          
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Banner-0.PNG" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+              <img src="Banner-1.png" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+              <img src="Banner-2.PNG" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item">
+              <img src="Banner-3.PNG" class="d-block w-100" alt="">
+            </div> <div class="carousel-item">
+              <img src="Banner-4.PNG" class="d-block w-100" alt="">
+            </div>
+          </div>
+          <a href="#slider1" class="carousel-control-prev" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a href="#slider1" class="carousel-control-next" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+      
+     
+    </header>
+    <main>
+      <!-- bildirim ve finansal filtreleme -->
+      <div id="filtre mb-5 ">
+        <div class="container">
+          <div class="row justify-content-evenly"  >
+              <div class="col-3  mx-4 golge red-border">
+                  <div class="row  ">
+                  <div class="col-1 g-0 me-5"><img src="b-0.png" alt="" width="70px" height="56px"></div>
+                  <div class="col-5 ms-3 mt-3 bildirim"><p>Bildirimler</p></div>
+                  <div class="col-1" ><Button class="btn " ><i class="fa-solid fa-sliders fa-lg mt-4"></i> </Button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3  mx-4 golge red-border">
+                <div class="row  ">
+                <div class="col-2 g-0 me-3"><img src="b-1.png" alt="" width="70px" height="56px"></div>
+                <div class="col-8 ms-3  mt-3 bildirim"><div>Finansal Tablolar</div></div>
+                </div>
+            </div>
+            <div class="col-3  mx-4 golge red-border">
+              <div class="row  ">
+              <div class="col-2 g-0 me-3"><img src="b-2.png" alt="" width="70px" height="56px"></div>
+              <div class="col-8 ms-3 mt-3 bildirim"><p>Hak Kullanımları</p></div>
+            
+          </div>
+          </div>
+         </div>
+       </div>
+      </div>
+      <!-- şirketlerin genel açıklama ve bilgileri -->
+
+      <div id="Sirketler" class="Sirket">
+        <div class="container ">
+          <div class="row">
+            <div class="col-12">
+              <div class="card mt-5 ">
+                  
+                <div class="card-header">Şirket Yayınları</div>
+                <div class="card-body">
+                  <form >
+                    <div class="input-group">
+                      <input type="text"  id="txtTaskName" class="form-control">
+                      <input type="text"  id="txtTaskNamee" class="form-control">
+                      <button class="btn btn-primary" id="btnAddNewTask">Başlık Ekle</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="card mt-3 ">
+                <div class="card-header"> <button class="btn btn-danger btn-sm float-end" id="btnClear">Temizle</button></div>
+                <div class="card-body ">
+                  <div >
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <ul id="task-list" class="list-group list-group-flush">
+                            </ul>
+                            <button
+                              type="button"
+                              class="btn position-absolute modalAc"
+                              data-bs-toggle="modal"
+                              data-bs-target="#myModal"
+                              
+                            >
+                              Aç
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+              
+                    <div class="modal " id="myModal" >
+                      <div class="modal-dialog modal-lg" id="modalk">
+                        <div class="card mt-5 ">
+                          <div class="card-header">İçerik Ekleme</div>
+                          <div class="card-body">
+                            <form >
+                              <div class="input-group">
+                                <label for="formFile" class="form-label"  placeholder="fotoğraf ekle" ></label>
+                                <input class="form-control" type="file" id="formFile" >
+                                <input type="text" placeholder="Başlık ekle"  id="txtBaslık" class="form-control">
+                                <button class="btn btn-primary" id="btnAddNewTask" >Ekle</button>
+                                
+                                
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                        <div class="modal-content" >
+                         
+                          <div class="modal-header">
+                            <div class="row p-2 m-3">
+                              <div class="col-2 mx-2">
+                                <img
+                                  src="Gsb.jpeg"
+                                  alt=""
+                                  srcset=""
+                                  width="100px"
+                                  height="60px"
+                                />
+                              </div>
+                              <div class="col-8 mx-2 ">
+                                <a href="" class="yazı link" style="text-decoration: none;">
+                                  GSD DENİZCİLİK GAYRİMENKUL İNŞAAT SANAYİ VE TİCARET A.Ş.</a
+                                >
+                              </div>
+                              <div class="col-1 mx-2">
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                ></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-body navbar-color ">
+                            <div class="row ccerve modal-color" style="width: 350px; height: 40px; ">
+                              <div class="col-1 navbar-color"  ><i class="fa-solid fa-paperclip"></i></div>
+                              <div class="col-11 modal-color" style="margin: 0; padding: 0; "><a class="linka linka yazı" href="2023 y_l_ Finansal Sonuçlar- GSD Marin.pdf" download
+                                >2023 yılı Finansal Sonuçlar- GSD MARİN.pdf</a
+                              ></div>
+                            </div>
+                          </div>
+                          <br>
+                           <div id="TarihVEAyarlar" class="modal-color">
+                            <div class="row ">
+                              <div class="col-8">
+                                <div class="row-6">
+                                  <table class="table table-borderless " >
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Gönderim Tarihi</th>
+                                      <th scope="col">Bildirim Tipi</th>
+                                      <th scope="col">Yıl</th>
+                                      <th scope="col">Periyot</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      
+                                      <td>04.05.2024
+                                        <br>
+                                        22:02:32</td>
+                                      <td>ÖDA</td>
+                                      <td>-</td>
+                                      <td>-</td>
+                                    </tr>
+                                    
+                                  </tbody>
+                                </table></div>
+                                <div class="col-4 ccerve m-4 p-2 golge">
+                                  <a href="" class="yazı linka "><i class="fa-solid fa-file-signature"></i></i>İmzalı Görüntüle</a>
+                                </div>
+                               
+                            </div>
+                              <div class="col-3">
+                                <div class="col-12 py-3 mx-4">
+                                  <div class="row-6 ccerve my-3 p-2 golge">
+                                    <a href="" class="yazı linka"><i class="fa-solid fa-bell me-2"></i>Bildirimler</a> </div>
+                                  <div class="row-6 ccerve my-3 p-2 golge"><a href="" class="yazı linka"><i class="fa-solid fa-table-list me-2"></i>Finansal Tablolar</a></div>
+                                  <div class="row-6 ccerve my-3 p-2 golge"><a href="" class="yazı linka"><i class="fa-solid fa-coins me-2"></i>Hak Kullanımları</a></div>
+                                </div>
+                              </div>
+                            </div>
+                           </div>
+                           <br>
+                           <br>
+                           <br>
+                          <div id="Açıklama">
+                            <h3 class="ps-4">Özel Durum Açıklaması (Genel)</h3>
+                            <div class="kontenır mx-auto">
+                              <div class="ccerve">
+                                <h6>Özet bilgi</h6>
+                                <p>31.12.2023 Finansal Sonuçlar Bilgilendirme Sunumu</p>
+                                <br><br>
+                                <h6 class="mb-3 red ps-4">İlgili Şirketler []</h6>
+                                <h6 class="red ps-4">İlgili Fonlar []</h6>
+          
+                               <div id="tablo" class="ps-3" style="width: 600px;">
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col" class="red">Özel Durum Açıklaması (Genel)
+                                      </th>
+                                      <th scope="col"> </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>Yapılan Açıklama Güncelleme mi?</td>
+                                      <td>Hayır (No)</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Yapılan Açıklama Düzeltme mi?</td>
+                                      <td>Hayır (No)</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Konuya İlişkin Daha Önce Yapılan Açıklamanın Tarihi</td>
+                                      <td>-</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Yapılan Açıklama Ertelenmiş Bir Açıklama mı?</td>
+                                      <td>	
+                                        Hayır (No)</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="col" class="red">Bildirim İçeriği
+          
+                                      </th>
+                                      <th scope="col"> </th>
+                                    </tr>
+                                    <tr>
+                                      <th scope="col" class="red">Açıklamalar
+                                      </th>
+                                      <th scope="col"> </th>
+                                    </tr>
+                                    
+                                  </tbody>
+                                </table>
+                               </div>
+                               <p class="ps-5 py-2">Şirketimizin 01.01.2023 - 31.12.2023 hesap dönemine ilişkin bağımsız denetimden geçmiş finansal tabloları 03.05.2024 tarihinde kamuya açıklanmış olup, ilgili finansal tablolar ve faaliyet raporu şirketimiz internet sitesinde (https://www.gsdmarin.com.tr/ ) yatırımcılarımızın bilgisine sunulmuştur.
+                                <br><br>
+          
+                                2023 yılı finansal sonuçlarına ilişkin ekli sunumda, SPK'nın 07.03.2024 tarihli İlke Kararı doğrultusunda; Şirketimiz finansal raporları ile aynı sorumluluk esaslarına tabi olmak üzere; yatırımcı ve analistler tarafından sağlıklı bir analiz yapılabilmesi için, geçmiş döneme ait enflasyon muhasebesi uygulanmamış verilere de yer verilmiştir.
+                                <br><br>
+                                Söz konusu ilave bilgiler, sadece bu döneme özgü olarak açıklanmış olup, enflasyon muhasebesi uygulanmamış 2023 yılı finansal verileri bağımsız denetimden geçmemiş, yönetim raporlaması kapsamında hazırlanan bilgileri içermektedir ve şirketimizin bağımsız denetimden geçmiş olan 31.12.2023 tarihli finansal raporlarında yer almamaktadır. Finansal performansımıza yönelik tutarlı ve karşılaştırılabilir bir değerlendirme yapılabilmesi amacıyla yatırımcılarımızın ve piyasa paydaşlarının değerlendirmesine sunulmak üzere hazırlanmıştır.
+                                <br><br>
+                                Kamuoyunun bilgilerine sunarız.
+                                <br><br>
+                                Saygılarımızla,
+                              Yukarıdaki açıklamalarımızın, Sermaye Piyasası Kurulunun yürürlükteki Özel Durumlar Tebliğinde yer alan esaslara uygun olduğunu, bu konuda/konularda tarafımıza ulaşan bilgileri tam olarak yansıttığını, bilgilerin defter, kayıt ve belgelerimize uygun olduğunu, konuyla ilgili bilgileri tam ve doğru olarak elde etmek için gerekli tüm çabaları gösterdiğimizi ve yapılan bu açıklamalardan sorumlu olduğumuzu beyan ederiz.</p>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div id="yazdırma" class="mt-5 mb-3">
+                            <div class="ms-0 row d-flex justify-content-evenly align-items-center " style="background-color: #65646a; height: 80px; width: 800px;">
+                              <div class="col-3 text-center modal-color" style="height: 40px;"><a href="" class="linka yazı "><i class="fa-solid fa-file-pdf me-2"></i>PDF Olarak İndir</a></div>
+                              <div class="col-3 modal-color text-center "style="height: 40px;"><a href="" class="linka yazı" ><i class="fa-solid fa-file-word me-2"></i>Word Olarak İndir</a></div>
+                              <div class="col-3 modal-color text-center"style="height: 40px;"><a href="" class="linka yazı"><i class="fa-solid fa-file-excel me-2"></i>Excel Olarak İndir</a></div>
+                              <div class="col-2 modal-color text-center"style="height: 40px;"><a href="" class="linka yazı"><i class="fa-solid fa-print me-2"></i>Yazdır</a></div>
+                            </div>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+      <script src="kapGov.js"></script>
+      
+    </main>
+    <footer>
+      <!-- En üst bülten ve seçimler -->
+      <div id="Bultenler " class="bulten-renk ">
+        <div class="container ">
+          <div class="row justify-content-evenly">
+            <div class="col-2 border my-4 me-3"> 
+              <div class="row bulten-renk-degis">
+                <div class="col-2 m-0 p-0">
+                  <img src="vap.png" alt="" style="width: 80px;">
+                </div >
+              <div class="col-10 mt-2 bulten-yazı-b" style="padding-left: 55px;">Veri Analizi platformu</div>
+              
+              </div>
+            </div>
+            <div class="col-2 border my-4 me-3"> 
+              <div class="row bulten-renk-degis">
+                <div class="col-2 m-0 p-0 bulten-yazı-b ">
+                  <img src="vap1.png" alt="" style="width: 80px;">
+                </div >
+              <div class="col-10 bulten-yazı-b " style="padding-left: 55px; ">Yatırımcı Bilgi Merkezi</div>
+              
+              </div>
+            </div>
+            <div class="col-2 border my-4 me-3"> 
+              <div class="row bulten-renk-degis">
+                <div class="col-2 m-0 p-0 bulten-yazı-b ">
+                  <img src="vap2.png" alt="" style="width: 80px; height: 62px;">
+                </div >
+              <div class="col-10 bulten-yazı-b " style="padding-left: 55px; ">Borsa Günlük Bülteni</div>
+              
+              </div>
+            </div>
+            <div class="col-2 border my-4 me-3"> 
+              <div class="row bulten-renk-degis">
+                <div class="col-2 m-0 p-0 bulten-yazı-b ">
+                  <img src="vap3.png" alt="" style="width: 80px; height: 62px;">
+                </div >
+              <div class="col-10 bulten-yazı-b mt-3" style="padding-left: 55px; ">SPK Bülteni</div>
+              
+              </div>
+            </div>
+            <div class="col-2 border my-4 "> 
+              <div class="row bulten-renk-degis">
+                <div class="col-2 m-0 p-0 bulten-yazı-b ">
+                  <img src="vap2.png" alt="" style="width: 80px; height: 62px;">
+                </div >
+              <div class="col-10 bulten-yazı-b mt-2" style="padding-left: 55px; ">Gayrimenkul Sertifikaları</div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+       <!-- ilgili bağlatılar bölümü -->
+       <div class="bulten-link-renk kapak" >
+        <div id="Bulten-link " class=" container" >
+          <div class="row justify-content-evenly">
+            <div class="row-2">
+              <div class="row pt-5 m-0 " >
+                <div class="col-3">
+                  <p class="bulet-yazı type-medium">Bildirim Sorgları</p>
+                  <ul class="navbar-nav small">
+                    <li class="nav-item ">
+                      <a href="" class="nav-link beyaz">Bugun Gelen Bildirimler</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">Beklenen Bildirimler</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">Detaylı Sorgulama</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">Finansal Tablo Kalem Sorguama</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-3">
+                  <p class="bulet-yazı type-medium">Şirketler</p>
+                  <ul class="navbar-nav small" >
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">BIST Şirketleri</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">Yatırım Kuruluşları*</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">Portföy Yönetim Şirketleri</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">Bağımsız Denetim Kuruluşları</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">Derecelendirme Şirketleri</a>
+                    </li><li class="nav-item">
+                      <a href="" class="nav-link beyaz">Değerlendirme Şirketleri</a>
+                    </li><li class="nav-item">
+                      <a href="" class="nav-link beyaz">Diğer Kap Üyeleri ve İşlem görmeyen Şirketler</a>
+                    </li><li class="nav-item">
+                      <a href="" class="nav-link beyaz">KAP Üyeliği Sona Eren Şirketler</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-3">
+                  <p class="bulet-yazı type-medium">Fonlar</p>
+                  <ul class="navbar-nav small" >
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">Borsa Yatırım Fonları</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">Yatırım Fonları</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">Emeklilik Yatırım Fonları</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">OKS Emeklilik Yatırım Fonları</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">Yabancı Yatırım Fonları</a>
+                    </li><li class="nav-item">
+                      <a href="" class="nav-link beyaz">Varlık Finansman Fonları</a>
+                    </li><li class="nav-item">
+                      <a href="" class="nav-link beyaz">Konut Finansman Fonları</a>
+                    </li><li class="nav-item">
+                      <a href="" class="nav-link beyaz">Gayrimenkul Yatırım Fonları</a>
+                    </li>
+                  </li><li class="nav-item">
+                    <a href="" class="nav-link beyaz">Firişim Sermayesi Fonları</a>
+                  </li>
+                </li><li class="nav-item">
+                  <a href="" class="nav-link beyaz">Proje Finansman Fonları</a>
+                </li>
+              </li><li class="nav-item">
+                <a href="" class="nav-link beyaz">Tasfiye olmuş Fonlar</a>
+              </li>
+                  </ul>
+                </div>
+                <div class="col-3">
+                  <p class="bulet-yazı type-medium">KAP Hakkında</p>
+                  <ul class="navbar-nav small">
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">Mevzuat , Duyurular ve Kılavuzlar</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">Sertifika işlemleri</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">Genel Bilgi</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">İlgili Linkler</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">Sermaye Piyasası Aracı Alım Satım Bildirimi</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="" class="nav-link beyaz">KVKK Kapsamında Düzeltilmiş Bildiirmler</a>
+                    </li>
+                  </ul>
+                </div>
+               </div>
+            </div>
+            <div class="row-1 mb-4">
+              <div class="mb-3 bulet-yazı type-medium">İlgili Bağlantılar</div>
+              <ul class="navbar-nav text flex-row small">
+                <li class="nav-item">
+                  <a href="" class="nav-link beyaz px-3 ">e-Genel Kurul</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link beyaz px-3">e-Yatırımcı</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link beyaz px-3">e-Şirket</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link beyaz px-3">e-Veri</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link beyaz px-3">Borsa İstanbul A.Ş.</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link beyaz px-3">VAP</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          </div>
+       </div>
+       <!-- footer en alt kısım -->
+       <div id="footer-bottem" style="background-color: #a03022;">
+        <div class="container">
+          <div class="row " >
+            <div class="col-1 mt-5"> 
+              <a href="index.html" class="navbar-brand"
+              ><img src="Footer_Logo.png"  alt=""/>
+              </a>
+          </div>
+            <div class="col-9 mt-5">
+              <ul class="navbar-nav  space-between flex-row ">
+                <li class="nav-item ">
+                  <a href="" class="nav-link ms-5 me-4 footer-link">Telif Hakkı ve Çeknce İhbarı</a>
+                </li>
+                <li class="nav-item ">
+                  <a href="" class="nav-link me-4 footer-link">Kişisel Verilerin Korunması</a>
+                </li>
+                <li class="nav-item ">
+                  <a href="" class="nav-link me-4 footer-link">Yardım</a>
+                </li>
+                <li class="nav-item ">
+                  <a href="" class="nav-link me-4 footer-link">İletişim</a>
+                </li>
+                <li class="nav-item ">
+                  <a href="" class="nav-link  footer-link">Site Haritası</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-2 mt-2">
+              <a href="index.html" class="navbar-brand">
+                <img src="mkk-footer.png"  alt=""/>
+              </a>
+            </div>
+
+
+
+          </div>
+         
+        
+        
+        </div>
+       </div>
+    </footer>
+    <!-- yukarı çıkma butonu -->
+    <div id="yukarı" >
+      <a href="#body" id="backtotop" style="background-color: white; text-decoration: none;"><i class="fa-solid fa-angle-up m-2 yazı " ></i>
+        <span style="font-size: 15px; " class="me-3 yazı" >Yukarı</span></a> 
+    </div>
+    <div id="canvas">
+      <button type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#myCanvas"><i class="fa-solid fa-bars fa-2xl" style="color: gray;"></i></button>
+      <div class="offcanvas offcanvas-end " data-bs-backdrop="false" id="myCanvas"  >
+        <div class="offcanvas-header">
+          <h5>Lorem, ipsum.</h5>
+          <button type="button" data-bs-dismiss="offcanvas">close</button>
+        </div>
+        <div class="offcanvas-body"></div>
+      </div>
+    </div>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
